@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kredit Bee</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Montserrat", sans-serif;
+      }
+
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .nav-items {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+      }
+
+      .nav-items > div > a {
+        text-decoration: none;
+        color: black;
+        font-weight: 600;
+      }
+
+      .downarrow {
+        color: #fdb515;
+      }
+
+      nav > div > img {
+        width: 180px;
+      }
+
+      .nav-icons {
+        display: flex;
+        gap: 30px;
+        font-size: 24px;
+      }
+
+      .sign-up-btn {
+        padding: 15px 10px;
+        border: 1px solid #f14365;
+        color: #f14365;
+        background-color: white;
+        font-weight: 600;
+        border-radius: 8px;
+      }
+
+      main {
+        text-align: center;
+      }
+
+      main > h2 {
+        color: #383838;
+        margin-top: 20px;
+      }
+
+      .yellow-line {
+        height: 4px;
+        background-color: #fdb515;
+        width: 5%;
+        border-radius: 5px;
+        margin: 5px auto;
+      }
+
+      .cards {
+        display: flex;
+        gap: 30px;
+        max-width: 1200px;
+        margin: 60px auto;
+      }
+
+      .card {
+        width: 100%;
+        text-align: left;
+        padding: 20px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        border-radius: 8px;
+      }
+
+      .card-title {
+        margin: 10px 0px;
+        color: #191919;
+        font-weight: 500;
+        font-size: 16px;
+      }
+
+      .card-description {
+        color: #696969;
+        font-size: 14px;
+      }
+
+      .blog-section {
+        max-width: 1280px;
+        margin: 10px auto;
+      }
+
+      .blogs {
+        display: flex;
+        gap: 30px;
+        max-width: 1280px;
+      }
+
+      .blogs > h2 {
+        margin-left: 50px;
+      }
+
+      .blog {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        border-radius: 10px;
+        padding-bottom: 30px;
+      }
+
+      .blog > img {
+        width: 100%;
+        border-radius: 8px;
+      }
+
+      .blog > .category {
+        margin-left: 10px;
+      }
+      .blog > .title {
+        margin-left: 10px;
+        font-size: 22px;
+      }
+      .blog > .description {
+        margin-left: 10px;
+      }
+
+      #third-section {
+        background-color: #ffde59;
+        max-width: 1280px;
+        margin: 100px auto;
+        padding: 20px 0px 0px 0px;
+      }
+
+      .form-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 35px;
+        max-width: 350px;
+        margin: auto;
+        margin-top: 25px;
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+
+      .form-container > p:nth-child(2) > a {
+        text-decoration: none;
+        font-weight: 700;
+      }
+
+      .sign-up-form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 10px;
+        padding: 20px;
+      }
+
+      .sign-up-form > label {
+        font-weight: 600;
+      }
+
+      .sign-up-form > label > span {
+        color: red;
+      }
+
+      .sign-up-form > input {
+        padding: 10px 5px;
+        margin: 0px 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 14px;
+      }
+
+      .sign-up-form > button {
+        width: 100%;
+        padding: 12px;
+        background-color: #007bff;
+        border: none;
+        border-radius: 8px;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+
+      .terms {
+        font-size: 10px;
+        text-align: center;
+      }
+
+      footer {
+        width: 100%;
+        text-align: center;
+        background-color: #282120;
+        padding: 20px 0px;
+        color: #aca9a9;
+        margin-top: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <nav>
+        <div>
+          <img
+            src="https://ik.imagekit.io/krazybee/kreditbee_in/logo_horizontal_BNqOuZWg_.svg"
+            alt="KreditBee_Logo"
+          />
+        </div>
+
+        <div class="nav-items">
+          <div>
+            <a href="#"
+              >Loans <i class="downarrow fa-solid fa-angle-down"></i>
+            </a>
+          </div>
+          <div>
+            <a href="#"
+              >Calculators <i class="downarrow fa-solid fa-angle-down"></i
+            ></a>
+          </div>
+          <div>
+            <a href="#">Credit Report</a>
+          </div>
+          <div>
+            <a href="#">Refer & Earn</a>
+          </div>
+
+          <div class="nav-icons">
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
+
+          <div>
+            <button class="sign-up-btn">SIGN UP</button>
+          </div>
+        </div>
+      </nav>
+
+      <main>
+        <h2>Why Choose KreditBee?</h2>
+        <div class="yellow-line"></div>
+        <div class="cards">
+          <div class="card card1">
+            <img
+              src="https://ik.imagekit.io/krazybee/kreditbee_in/banners/New_Web/ic-1.svg"
+              alt="icon"
+              class="card-image"
+            />
+            <h4 class="card-title">Lower Interest Rates</h4>
+            <p class="card-description">
+              Get loans for multiple purposes at lower interest rates to suit
+              your needs
+            </p>
+          </div>
+          <div class="card card2">
+            <img
+              src="https://ik.imagekit.io/krazybee/kreditbee_in/banners/New_Web/ic-2.svg"
+              alt="icon"
+              class="card-image"
+            />
+            <h4 class="card-title">Fast Processing and Disbursal</h4>
+            <p class="card-description">
+              Apply online, check your eligibility and get money directly in
+              your bank in 10 minutes
+            </p>
+          </div>
+          <div class="card card3">
+            <img
+              src="https://ik.imagekit.io/krazybee/kreditbee_in/banners/New_Web/ic-3.svg"
+              alt="icon"
+              class="card-image"
+            />
+            <h4 class="card-title">Easy Repayment Options</h4>
+            <p class="card-description">
+              Repay the loan amount in easy EMI with flexible tenure options
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <section class="blog-section">
+        <h1>Fresh from the Blog <i class="fa-solid fa-arrow-right"></i></h1>
+        <div class="blogs">
+          <div class="blog blog-1">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdjOdoizUPetwZ-WwnFbqGXaYcMPy11L5WEg&s"
+              alt="Comfy Throws"
+            />
+            <p class="category">Shopping Guides</p>
+            <h3 class="title">9 Comfy Throws for Cosy Autumn Vibes</h3>
+            <p class="description">
+              Embrace the snuggling season with stylish throws that will warm
+              your hearts.
+            </p>
+          </div>
+          <div class="blog blog-2">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5dkuVihGVCK6a9Za4xCzdGFYistHWA6T96Q&s"
+              alt="Beautiful Bags"
+            />
+            <p class="category">Shopping Guides</p>
+            <h3 class="title">
+              14 Beautiful Bags That Express Your Unique Style
+            </h3>
+            <p class="description">
+              Amp up your fashion game with bags that perfectly match your
+              aesthetic.
+            </p>
+          </div>
+          <div class="blog blog-3">
+            <img
+              src="data:image/jpeg;base64,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"
+              alt="Gift Ideas"
+            />
+            <p class="category">Gift Ideas</p>
+            <h3 class="title">The Best Gift Ideas for Kids of All Ages</h3>
+            <p class="description">
+              Shop the sweetest surprises for all little ones in your
+              family—these gifts for kids will definitely earn you some brownie
+              points.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="third-section">
+        <div class="form-container">
+          <h2>Create Account</h2>
+          <p>Already have an account? <a href="#">Sign in</a></p>
+          <form class="sign-up-form">
+            <label for="fullname">Full Name <span>*</span></label>
+            <input
+              type="text"
+              id="fullname"
+              placeholder="Enter full name"
+              required
+            />
+
+            <label for="email">Email address <span>*</span></label>
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter email address"
+              required
+            />
+
+            <label for="phone">Phone Number <span>*</span></label>
+            <input
+              type="text"
+              id="phone"
+              placeholder="Enter your WhatsApp number"
+              required
+            />
+
+            <label for="referral">Referral Code (Optional)</label>
+            <input
+              type="text"
+              id="referral"
+              placeholder="Enter referral code"
+            />
+
+            <button type="submit">Submit</button>
+          </form>
+          <p class="terms">
+            By signing up, I accept the <a href="#">Terms of Service</a> and
+            acknowledge the <a href="#">Privacy Policy</a>.
+          </p>
+        </div>
+        <footer>
+          <p>COPYRIGHT ©ETSY PRIVATE LIMITED. ALL RIGHTS RESERVED</p>
+        </footer>
+      </section>
+    </div>
+  </body>
+</html>
